@@ -1,2 +1,2 @@
-# E-commerce de hardware
+# Hardware E-commerce
 Welcome for my palace of codes!
