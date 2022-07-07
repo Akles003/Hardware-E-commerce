@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Staatliches&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/keen-slider@6.7.0/keen-slider.min.css"/>
+        <script src="../JS/script.js"></script>
+        <title>ONCOMMERCE - O melhor site de hardware | ON</title>
+        <link rel="shortcut icon" href="../IMAGES/icon2.png">
+    </head>
+
+    <body id="body">
+        
+        <!--CABEÇALHO-->
+        <header class="cabecalhoPrincipal">
+
+            <div id="fundo-login1" onclick="closeLogin()"></div>
+                
+            <!--LOGO-->
+            <div class="on">
+                <a href="index.html">ON<span class="commerce">Commerce</span></a>
+            </div>
+            
+            <!--BARRA DE PESQUISA-->
+            <div class="pesquisa">
+                <input id="search" type="search" placeholder="O que está procurando?">
+                <span>
+                    <svg id="lupa" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                    </svg>
+                </span>
+            </div>
+
+            <!--USUÁRIO-->
+            <div class="conta">
+                <a href="#" id="link-icon1" class="titulos" onmouseover="mudaCor(1)" onmouseout="voltaCor(1)" onclick="telaLogin()">
+                    <svg id="icon-account1" class="icones" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                        <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+                    </svg><span id="user-login" class="user">Login</span>
+                </a>
+            </div>
+    
+            <!--MEU CARRINHO-->
+            <div class="carrinho">
+                <a href="carrinho.html" target="_blank" id="link-icon2" class="titulos" onmouseover="mudaCor(2)" onmouseout="voltaCor(2)">
+                    <svg id="icon-account2" class="icones" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                    </svg><span class="user">Carrinho</span>
+                </a>
+            </div>
+
+            <!--MENU LATERAL-->
+            <div class="menu">
+                <button class="btn" onclick="openNav();">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                    </svg>
+                </button>
+    
+                <!--FECHAR MENU LATERAL-->
+                <div id="mySidenav" class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
+                        <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
+                      </svg></a>
+    
+                      <!--"SOBRE NÓS" MENU LATERAL-->
+                    <div class="div-nav" onmouseover="mudaCor(3)" onmouseout="voltaCor(3)">
+                        <a id="link-icon3" class="nav-content">
+                            <svg  id="icon-account3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-square" viewBox="0 0 16 16">
+                                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                                <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                            </svg><span>Sobre Nós</span>
+                        </a>
+                    </div>
+    
+                    <!--"SUPORTE" MENU LATERAL-->
+                    <div class="div-nav" onmouseover="mudaCor(4)" onmouseout="voltaCor(4)">
+                        <a id="link-icon4" class="nav-content" >
+                            <svg  id="icon-account4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-headset" viewBox="0 0 16 16">
+                                <path d="M8 1a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a6 6 0 1 1 12 0v6a2.5 2.5 0 0 1-2.5 2.5H9.366a1 1 0 0 1-.866.5h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 .866.5H11.5A1.5 1.5 0 0 0 13 12h-1a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h1V6a5 5 0 0 0-5-5z"/>
+                            </svg><span>Suporte</span>
+                        </a>
+                    </div>
+    
+                    <!--"CONTATO" MENU LATERAL-->
+                    <div class="div-nav" onmouseover="mudaCor(5)" onmouseout="voltaCor(5)">
+                        <a href="contato.html" id="link-icon5" class="nav-content" >
+                            <svg  id="icon-account5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-dots" viewBox="0 0 16 16">
+                                <path d="M5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                                <path d="m2.165 15.803.02-.004c1.83-.363 2.948-.842 3.468-1.105A9.06 9.06 0 0 0 8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6a10.437 10.437 0 0 1-.524 2.318l-.003.011a10.722 10.722 0 0 1-.244.637c-.079.186.074.394.273.362a21.673 21.673 0 0 0 .693-.125zm.8-3.108a1 1 0 0 0-.287-.801C1.618 10.83 1 9.468 1 8c0-3.192 3.004-6 7-6s7 2.808 7 6c0 3.193-3.004 6-7 6a8.06 8.06 0 0 1-2.088-.272 1 1 0 0 0-.711.074c-.387.196-1.24.57-2.634.893a10.97 10.97 0 0 0 .398-2z"/>
+                            </svg><span>Contato</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+
+        <!--BARRA DE DEPARTAMENTOS-->
+        <div class="departamento">
+            <nav class="categoria">
+                <div class="dropdown">
+                    <button class="dropbtn">Hardware</button>
+                    <div class="dropdown-content">
+                      <a href="#">Processadores</a>
+                      <a href="#">Placa de Vídeo</a>
+                      <a href="#">Placa Mãe</a>
+                      <a href="#">Memória RAM</a>
+                      <a href="#">SSD</a>
+                      <a href="#">HDD</a>
+                      <a href="#">Fontes</a>
+                      <a href="#">Gabinete</a>
+                    </div>
+                </div>
+    
+                <div class="dropdown">
+                    <button class="dropbtn">Computadores</button>
+                    <div class="dropdown-content">
+                      <a href="#">Low-End</a>
+                      <a href="#">Mid-End</a>
+                      <a href="#">High-End</a>
+                    </div>
+                </div>
+    
+                <div class="dropdown">
+                    <button class="dropbtn">Notebooks</button>
+                    <div class="dropdown-content">
+                      <a href="#">Escritório</a>
+                      <a href="#">Gamer</a>
+                    </div>
+                </div>
+    
+                <div class="dropdown">
+                    <button class="dropbtn">Refrigeração</button>
+                    <div class="dropdown-content">
+                      <a href="#">Air Cooler</a>
+                      <a href="#">Water Cooler</a>
+                      <a href="#">Fans</a>
+                    </div>
+                </div>
+    
+                <div class="dropdown">
+                    <button class="dropbtn">Periféricos</button>
+                    <div class="dropdown-content">
+                      <a href="#">Mouse</a>
+                      <a href="#">Mouse pad</a>
+                      <a href="#">Mouse bungee</a>
+                      <a href="#">Teclado</a>
+                      <a href="#">Headset</a>
+                      <a href="#">Suporte de headset</a>
+                      <a href="#">WebCam</a>   
+                    </div>
+                </div>
+    
+                <div class="dropdown">
+                    <button class="dropbtn">Rede/Wireless</button>
+                    <div class="dropdown-content">
+                      <a href="#">Roteador</a>
+                      <a href="#">Modem</a>
+                      <a href="#">Cabo de rede</a>
+                      <a href="#">Placa de rede</a>
+                      <a href="#">Adaptador wireless</a>
+                    </div>
+                </div>
+    
+                <div class="dropdown">
+                    <button class="dropbtn">Realidade Virtual</button>
+                    <div class="dropdown-content">
+                      <a href="#">Óculos VR</a>
+                      <a href="#">Controle</a>
+                    </div>
+                </div>
+    
+                <div class="dropdown">
+                    <button class="dropbtn">Monitores</button>
+                    <div class="dropdown-content">
+                      <a href="#">Monitor de Escritório</a>
+                      <a href="#">Monitor Gamer</a>
+                    </div>
+                </div>
+    
+                <div class="dropdown">
+                    <button class="dropbtn">Cadeiras</button>
+                    <div class="dropdown-content">
+                      <a href="#">Cadeiras Ergonômica</a>
+                      <a href="#">Cadeiras de Escritório</a>
+                      <a href="#">Cadeiras Gamer</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <!--PROMOÇÕES-->
+        <div class="promocao">
+            <a href="#"><img class="promocao-imagem" src="../IMAGES/PRODUTO/promocao05.png" ></a>
+            <a href="##"><img class="promocao-imagem" src="../IMAGES/PRODUTO/ryzen5.png" ></a>
+            <a href="steellegend.html" target="_blank"><img class="promocao-imagem" src="../IMAGES/PRODUTO/steellegend.png" ></a>
+        </div>
+
+        <!------------ Tela de login ------------>
+        <div id="fundo-login2" onclick="closeLogin()"></div>
+
+        <div id="area-login" class="tela-login">
+            <div class="titulo-login">
+                <span class="fechar" onclick="closeLogin()">&times;</span>
+                <h1>Login</h1>
+            </div>
+            
+            <div class="email">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                </svg>
+                <input id="email" type="email" placeholder="Email*" onblur="validaEmail()"  maxlength="60"> 
+            </div>
+
+            <div class="senha">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lock" viewBox="0 0 16 16">
+                    <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zM5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/>
+                </svg>
+                <input id="pass" type="password" placeholder="Senha*" onblur="validaSenha()"> 
+            </div>
+
+            <div class="btn-login">
+                
+                <button type="submit" id="btn-enviar" onclick="enviaDados()"> 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                        <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="cadastrar">
+                <span>Não possui uma conta? </span><a href="#">CRIAR CONTA</a>
+            </div>
+        </div>
+
+        <!--CONTEÚDO-->
+        <main class="conteudo">
+
+            <!--PRODUTOS-->
+            <div class="conteudo-produto">
+                <div class="produto">
+                    <h4>Produtos</h4>
+                </div>
+                <div class="lista-produtos">
+                    <!------------ Desktop Gamer ------------>
+                    <h4>* Desktop Gamer</h4>
+                    <div class="tipos-produto">
+                        <div class="pdt">
+                            <a href="#">
+                                <img src="../IMAGES/PRODUTO/computador01.jpg">
+                                <h5>Computador Gamer Intel Core i5 9400f, 16GB DDR4. Geforce GTX 1050Ti 4GB, SSD 240GB, Fonte 500W</h5>
+                                <h2>R$ 3.890,90</h2>
+                            </a>
+                        </div>
+                        
+                        <div class="pdt">
+                            <a href="#">
+                                <img src="../IMAGES/PRODUTO/computador02.jpg">
+                                <h5>PC Gamer I7-10700F, Geforce RTX 3060 TI, 16GB DDR4, SSD 240GB, 750W PLUS BRONZE</h5>
+                                <h2>R$ 9.790,90</h2>
+                            </a>
+                        </div>
+
+                        <div class="pdt">
+                            <a href="#">
+                                <img src="../IMAGES/PRODUTO/computador03.jpg">
+                                <h5>PC Gamer i7-10700F, Geforce RTX3060 12GB, 16GB RAM, SSD 500GB, Branco</h5>
+                                <h2>R$ 8.499,90</h2>
+                            </a>
+                        </div>
+
+                        <div class="pdt">
+                            <a href="#">
+                                <img src="../IMAGES/PRODUTO/computador04.jpg">
+                                <h5>PC Gamer Processador Ryzen 5-3400G, RGB, 4GB RAM, HD 500, Preto</h5>
+                                <h2>R$ 3.299,90</h2>
+                            </a>
+                        </div>
+
+                        <div class="pdt">
+                            <a href="#">
+                                <img src="../IMAGES/PRODUTO/computador05.jpg">
+                                <h5>PC Gamer XPG Intel Core i7-12700K, Geforce RTX 3070 Ti, 16GB RAM, SSD 500GB, Branco</h5>
+                                <h2>R$ 14.690,90</h2>
+                            </a>
+                        </div>
+
+                        <div class="pdt">
+                            <a href="#">
+                                <img src="../IMAGES/PRODUTO/computador06.jpg">
+                                <h5>PC Gamer Skul 5000 I5-10400F, Geforce GTX 1650, 8GB DDR4, SSD 240GB, 600W PLUS WHITE</h5>
+                                <h2>R$ 4.869,90</h2>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!------------ Placas de video ------------>
+                    <h4>* Placas de vídeo</h4>
+                    <div class="tipos-produto">
+                        <div class="pdt">
+                            <a href="#">
+                                <img src="../IMAGES/PRODUTO/rtx3050asus.jpg">
+                                <h5>placa de vídeo nvidea geforce rtx 3050 Asus OC 8gb</h5>
+                                <h2>R$ 2.199,90</h2>
+                            </a>
+                        </div>
+                        
+                        <div class="pdt">
+                            <a href="#">
+                                <img src="../IMAGES/PRODUTO/rtx3050strix.jpg">
+                                <h5>placa de vídeo nvidea geforce rtx 3050 asus Rog strix OC 8gb</h5>
+                                <h2>R$ 3.299,90</h2>
+                            </a>
+                        </div>
+
+                        <div class="pdt">
+                            <a href="#">
+                                <img src="../IMAGES/PRODUTO/rtx3080asus.jpg">
+                                <h5>placa de vídeo nvidea geforce rtx 3080 asus tuf OC 8gb</h5>
+                                <h2>R$ 6.499,90</h2>
+                            </a>
+                        </div>
+
+                        <div class="pdt">
+                            <a href="#">
+                                <img src="../IMAGES/PRODUTO/placa_promocao.jpg">
+                                <h5>placa de vídeo nvidea geforce gigabyte rtx 2060 6gb</h5>
+                                <h2>R$ 2.299,90</h2>
+                            </a>
+                        </div>
+
+                        <div class="pdt">
+                            <a href="#">
+                                <img src="../IMAGES/PRODUTO/rtx3090evga.jpg">
+                                <h5>placa de vídeo nvidea geforce evga rtx 3090 24gb gddr6x</h5>
+                                <h2>R$ 10.990,90</h2>
+                            </a>
+                        </div>
+
+                        <div class="pdt">
+                            <a href="#">
+                                <img src="../IMAGES/PRODUTO/rtx2080super.jfif">
+                                <h5>placa de vídeo msi rtx 2080 super oc gaming trio 8gb gddr6</h5>
+                                <h2>R$ 3.729,90</h2>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!------------ Processadores ------------>
+                    <h4>* Processadores</h4>
+                    <div class="tipos-produto">
+                        <div class="pdt">
+                            <a href="#">
+                                <img src="../IMAGES/PRODUTO/processador01.jpg">
+                                <h5>Processador AMD Ryzen 5 5600X, Cache 35MB, 3.7GHz (4.6GHz Max Turbo), AM4, Sem Vídeo</h5>
+                                <h2>R$ 1.299,90</h2>
+                            </a>
+                        </div>
+                        
+                        <div class="pdt">
+                            <a href="#">
+                                <img src="../IMAGES/PRODUTO/processador02.jpg">
+                                <h5>Processador AMD Ryzen 5 4600G, Cachê 11MB, 3.7GHz (4.2GHz Max Turbo), AM4, Vídeo Integrado</h5>
+                                <h2>R$ 759,90</h2>
+                            </a>
+                        </div>
+
+                        <div class="pdt">
+                            <a href="#">
+                                <img src="../IMAGES/PRODUTO/processador03.jpg">
+                                <h5>Processador AMD Ryzen 3 4100, Cachê 6MB, 3.8GHz (4.0GHz Max Turbo), AM4, Sem Vídeo</h5>
+                                <h2>R$ 499,90</h2>
+                            </a>
+                        </div>
+
+                        <div class="pdt">
+                            <a href="#">
+                                <img src="../IMAGES/PRODUTO/processador04.jpg">
+                                <h5>Processador Intel Core i5-10400, Cache 12MB, 2.9GHz (4.3GHz Max Turbo), LGA 1200</h5>
+                                <h2>R$ 849,90</h2>
+                            </a>
+                        </div>
+
+                        <div class="pdt">
+                            <a href="#">
+                                <img src="../IMAGES/PRODUTO/processador05.jpg">
+                                <h5>Processador Intel Core i7-10700F, Cache 16MB, 2.9GHz (4.8GHz Max Turbo), LGA 1200</h5>
+                                <h2>R$ 1.690,90</h2>
+                            </a>
+                        </div>
+
+                        <div class="pdt">
+                            <a href="#">
+                                <img src="../IMAGES/PRODUTO/processador06.jpg">
+                                <h5>Processador Intel Core i7-12700K, Cache 25MB, 3.6GHz (5.0GHz Max Turbo), LGA 1700</h5>
+                                <h2>R$ 2.529,90</h2>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!------------ Placas mãe ------------>
+                    <h4>* Placas mãe</h4>
+                    <div class="tipos-produto">
+                        <div class="pdt">
+                            <a href="steellegend.html" target="_blank">
+                                <img src="../IMAGES/PRODUTO/placamae01.jpg">
+                                <h5>Placa-Mãe ASRock B450M Steel Legend, AMD AM4, mATX, DDR4</h5>
+                                <h2>R$ 690,90</h2>
+                            </a>
+                        </div>
+                        
+                        <div class="pdt">
+                            <a href="#">
+                                <img src="../IMAGES/PRODUTO/placamae02.jpg">
+                                <h5>Asrock B550m Steel Legend - am4 - Ddr4 4733 Oc</h5>
+                                <h2>R$ 1.339,90</h2>
+                            </a>
+                        </div>
+
+                        <div class="pdt">
+                            <a href="#">
+                                <img src="../IMAGES/PRODUTO/placamae03.jpg">
+                                <h5>Placa-Mãe Asus TUF Gaming X570-PLUS/BR, AMD AM4, ATX, DDR4</h5>
+                                <h2>R$ 1.429,90</h2>
+                            </a>
+                        </div>
+
+                        <div class="pdt">
+                            <a href="#">
+                                <img src="../IMAGES/PRODUTO/placamae04.jpg">
+                                <h5>Placa Mãe Gigabyte B660M Aorus PRO, Intel LGA 1700, mATX, DDR4</h5>
+                                <h2>R$ 1.299,90</h2>
+                            </a>
+                        </div>
+
+                        <div class="pdt">
+                            <a href="#">
+                                <img src="../IMAGES/PRODUTO/placamae05.jpg">
+                                <h5>Placa Mãe Asus PRIME Z590-P WIFI, Intel LGA1200, ATX, DDR4</h5>
+                                <h2>R$ 1.490,90</h2>
+                            </a>
+                        </div>
+
+                        <div class="pdt">
+                            <a href="#">
+                                <img src="../IMAGES/PRODUTO/placamae06.jpg">
+                                <h5>Placa Mãe Asus Prime H510M-E, Intel LGA 1200, microATX, DDR4</h5>
+                                <h2>R$ 529,90</h2>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!------------ Cadeira Gamer ------------>
+                    <h4>* Cadeiras Gamer</h4>
+                    <div class="tipos-produto">
+                        <div class="pdt">
+                            <a href="#">
+                                <img src="../IMAGES/PRODUTO/cadeira01.jpg">
+                                <h5>Cadeira Gamer Alpha Gamer Vega, Preto, Reclinável, com Almofadas, Cilindro de Gás Classe 4</h5>
+                                <h2>R$ 990,90</h2>
+                            </a>
+                        </div>
+                        
+                        <div class="pdt">
+                            <a href="#">
+                                <img src="../IMAGES/PRODUTO/cadeira02.jpg">
+                                <h5>Cadeira Gamer Husky Gaming Tempest 700, Branco, Com Almofadas, Descanso Para Pernas</h5>
+                                <h2>R$ 1.239,90</h2>
+                            </a>
+                        </div>
+
+                        <div class="pdt">
+                            <a href="#">
+                                <img src="../IMAGES/PRODUTO/cadeira03.jpg">
+                                <h5>Cadeira Gamer Husky Gaming Blizzard RGB, Preto, Luz RGB, Com Almofadas, Reclinável</h5>
+                                <h2>R$ 1.349,90</h2>
+                            </a>
+                        </div>
+
+                        <div class="pdt">
+                            <a href="#">
+                                <img src="../IMAGES/PRODUTO/cadeira04.jpg">
+                                <h5>Cadeira Gamer Husky Gaming Avalanche, Rosa e Branco, Com Almofadas, Reclinável</h5>
+                                <h2>R$ 1.099,90</h2>
+                            </a>
+                        </div>
+
+                        <div class="pdt">
+                            <a href="#">
+                                <img src="../IMAGES/PRODUTO/cadeira05.jpg">
+                                <h5>Cadeira Gamer Husky Gaming Snow, Preto e Vermelho, Cilindro de Gás Classe 4, Base em Metal</h5>
+                                <h2>R$ 590,90</h2>
+                            </a>
+                        </div>
+
+                        <div class="pdt">
+                            <a href="#">
+                                <img src="../IMAGES/PRODUTO/cadeira06.jpg">
+                                <h5>Cadeira Gamer Corsair T3 Rush, Cinza e Carvão, com Almofadas, Reclinável</h5>
+                                <h2>R$ 2.179,90</h2>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>         
+        </main>
+
+        <!--RODAPÉ-->
+        <footer class="rodape">
+            <div>
+                <span>ONCOMMERCE® é uma marca registrada de ONCOMMERCE COMÉRCIO ELETRÔNICO S/A | CNPJ: 00.000.000/0001-00 | Todos os direitos reservados. Os preços anunciados neste site ou via e-mail promocional podem ser alterados sem prévio aviso. A ONCOMMERCE não é responsável por erros descritivos. As fotos contidas nesta página são meramente ilustrativas do produto e podem variar de acordo com o fornecedor/lote do fabricante. Este site trabalha 100% em gambiarra.</span>
+            </div> 
+        </footer>
+    </body>
+</html>
